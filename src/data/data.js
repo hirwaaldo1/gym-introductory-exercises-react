@@ -1,27 +1,27 @@
 const data = [
   {
+    id: 1,
     name: "dog",
-    icon: "🐶",
   },
   {
+    id: 2,
     name: "cat",
-    icon: "🐱",
   },
   {
+    id: 3,
     name: "chicken",
-    icon: "🐔",
   },
   {
+    id: 4,
     name: "cow",
-    icon: "🐮",
   },
   {
+    id: 5,
     name: "sheep",
-    icon: "🛌",
   },
   {
+    id: 6,
     name: "horse",
-    icon: "🏇",
   },
 ];
 export default data;
