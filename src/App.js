@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 function App() {
-  const [firstName, setFirstName] = useState("");
-  const [lastName, setLastName] = useState("");
+  const [person, setPerson] = useState({ firstName: "", lastName: "" });
   return (
     <div className="flex justify-center">
       <div className="flex flex-col gap-3 w-1/5 mt-5">
@@ -9,22 +8,21 @@ function App() {
           type="text"
           className="input--style"
           placeholder="First name"
-          value={firstName}
-          onChange={(v) => setFirstName(v.target.value)}
-        ></input>
+          value={person.firstName}
+          onChange={(e) => setPerson({ ...person, firstName: e.target.value })}
+        />
         <input
           type="text"
           className="input--style"
-          value={lastName}
-          onChange={(v) => setLastName(v.target.value)}
+          value={person.lastName}
+          onChange={(e) => setPerson({ ...person, lastName: e.target.value })}
           placeholder="Last name"
-        ></input>
+        />
         <button
           className="bg-rose-600 p-3 uppercase text-white font-bold  rounded-md"
           onClick={() => {
-            alert(`Hello ${firstName} ${lastName}`);
-            setFirstName("");
-            setLastName("");
+            alert(`Hello ${person.firstName} ${person.lastName}`);
+            setPerson({ firstName: "", lastName: "" });
           }}
         >
           Greet Me
