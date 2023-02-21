@@ -1,6 +1,6 @@
 function App() {
   return (
-    <div className="flex">
+    <div className="button-container">
       <button
         onClick={() => {
           alert("Clicked");
