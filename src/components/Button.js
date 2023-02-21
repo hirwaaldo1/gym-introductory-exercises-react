@@ -1,0 +1,3 @@
+export default function Button({ title, msg }) {
+  return <button onClick={() => alert("you clicked on "+msg+"!")}>{title}</button>;
+}
