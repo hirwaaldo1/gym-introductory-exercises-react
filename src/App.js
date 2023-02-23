@@ -1,13 +1,13 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+import List from "./components/List";
+import DATA from "./data/data";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>Learn react in the gym</p>
-      </header>
+    <div className="flex justify-center mt-2">
+      <ul className="w-fit rounded-md">
+        {DATA.map((value, index) => (
+          <List {...value} key={index} />
+        ))}
+      </ul>
     </div>
   );
 }
